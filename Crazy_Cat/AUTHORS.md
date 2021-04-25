@@ -1,4 +1,4 @@
 This Program is a collaboration by:
-- Kelly Trujillo
+- Kelly Trujillo :)
 - Marta Sinitsina
 - Liz Nelson
