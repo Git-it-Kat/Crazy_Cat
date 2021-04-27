@@ -1,4 +1,4 @@
 This Program is a collaboration by:
-- Kelly Trujillo
-- Marta Sinitsina
-- Liz Nelson
+- Kelly Trujillo - KAT 
+- Marta Sinitsina - the Great 
+- Liz Nelson - The Lizzard 
