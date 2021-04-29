@@ -3,25 +3,26 @@
  * See LICENSE in the project root for license information.
  */
 
-// images references in the manifest
-import "../../assets/icon-16.png";
-import "../../assets/icon-32.png";
-import "../../assets/icon-80.png";
-
 /* global document, Office */
 
 Office.onReady(info => {
   if (info.host === Office.HostType.Outlook) {
-    document.getElementById("sideload-msg").style.display = "none";
-    document.getElementById("app-body").style.display = "flex";
-    document.getElementById("run").onclick = run;
+    document.getElementById("addSignatures").onclick = addSign;
+     //console.log ("added new code");
+
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByTagName("LI");
+    var i;
+
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      //hex num represents "x"
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+    // Click on a close button to hide the current list item
+    addCloseEvent();
   }
 });
-
-export async function run() {
- // Get a reference to the current message
-  var item = Office.context.mailbox.item;
-
-// Write message property value to the task pane
-  document.getElementById("item-subject").innerHTML = "<b>Subject:</b> <br/>" + item.subject;
-}
