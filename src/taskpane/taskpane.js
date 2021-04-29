@@ -26,3 +26,26 @@ Office.onReady(info => {
     addCloseEvent();
   }
 });
+
+// func add sig
+
+function addSign(){
+  var sign = document.querySelector('[name="email"]').value;
+
+    if (sign === "")
+      return;
+
+  var ul = document.getElementById("myList");
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(sign));
+  ul.appendChild(li);
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  addCloseEvent();
+
+}
