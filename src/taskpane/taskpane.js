@@ -4,7 +4,6 @@
  */
 
 /* global document, Office */
-
 Office.onReady(info => {
   if (info.host === Office.HostType.Outlook) {
     document.getElementById("addSignatures").onclick = addSign;
@@ -26,9 +25,7 @@ Office.onReady(info => {
     addCloseEvent();
   }
 });
-
-// func add sig
-
+// func add sign
 function addSign(){
   var sign = document.querySelector('[name="email"]').value;
 
@@ -47,7 +44,6 @@ function addSign(){
   li.appendChild(span);
   addCloseEvent();
   document.querySelector('[name="email"]').value = "";
-
 }
 //function add closeevent
 function addCloseEvent(){
