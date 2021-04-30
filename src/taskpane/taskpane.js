@@ -45,8 +45,8 @@ function addSign(){
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-
   addCloseEvent();
+  document.querySelector('[name="email"]').value = "";
 
 }
 //function add closeevent
