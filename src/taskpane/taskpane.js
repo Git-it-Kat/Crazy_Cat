@@ -7,11 +7,9 @@
 Office.onReady(info => {
   if (info.host === Office.HostType.Outlook) {
     document.getElementById("addSignatures").onclick = addSign;
-
     // Create a "close" button and append it to each list item
     var myNodelist = document.getElementsByTagName("LI");
     var i;
-
     for (i = 0; i < myNodelist.length; i++) {
       var span = document.createElement("SPAN");
       //hex num represents "x"
@@ -20,9 +18,12 @@ Office.onReady(info => {
       span.appendChild(txt);
       myNodelist[i].appendChild(span);
     }
+    
     // Click on a close button to hide the current list item
     addCloseEvent();
+   
   }
+});
       // func add sign
     function addSign(){
       var sign = document.querySelector('[name="email"]').value;
@@ -56,4 +57,3 @@ Office.onReady(info => {
         }
       }
     }
-});
