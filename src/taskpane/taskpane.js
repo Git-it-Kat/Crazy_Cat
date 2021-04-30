@@ -23,37 +23,37 @@ Office.onReady(info => {
     // Click on a close button to hide the current list item
     addCloseEvent();
   }
-});
-// func add sign
-function addSign(){
-  var sign = document.querySelector('[name="email"]').value;
+      // func add sign
+    function addSign(){
+      var sign = document.querySelector('[name="email"]').value;
 
-    if (sign === "")
-      return;
+        if (sign === "")
+          return;
 
-  var ul = document.getElementById("myList");
-  var li = document.createElement("li");
-  li.appendChild(document.createTextNode(sign));
-  ul.appendChild(li);
+      var ul = document.getElementById("myList");
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode(sign));
+      ul.appendChild(li);
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-  addCloseEvent();
-  document.querySelector('[name="email"]').value = "";
-}
-//function add closeevent
-function addCloseEvent(){
-  // Click on a close button to hide the current list item
-  var i;
-  var close = document.getElementsByClassName("close");
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+      addCloseEvent();
+      document.querySelector('[name="email"]').value = "";
     }
-  }
-}
+    //function add closeevent
+    function addCloseEvent(){
+      // Click on a close button to hide the current list item
+      var i;
+      var close = document.getElementsByClassName("close");
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+        }
+      }
+    }
+});
